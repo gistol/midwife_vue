@@ -9,7 +9,7 @@
                         <div class="box box-info">
                             <div class="box-body">
                                 <div class="col-sm-12 text-center">
-                                    <div align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive">
+                                    <div align="center"> <img style="max-width: 300px" alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive">
 
                                         <!--Upload Image Js And Css-->
 
