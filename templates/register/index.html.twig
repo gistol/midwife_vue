@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Register Form</h1>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                {{ form_start(registerForm) }}
+                {{ form_widget(registerForm) }}
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <input type="submit" class="btn btn-success" value="Register" />
+                    </div>
+                </div>
+
+                {{ form_end(registerForm) }}
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+{% endblock %}

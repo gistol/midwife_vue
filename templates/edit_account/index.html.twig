@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Account Panel{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Edit Account Form</h1>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                {{ form_start(editAccountForm) }}
+                {{ form_widget(editAccountForm) }}
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <input type="submit" class="btn btn-success" value="Edit" />
+                    </div>
+                </div>
+
+                {{ form_end(editAccountForm) }}
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

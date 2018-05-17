@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/user_profile.css') }}" />
+{% endblock %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block body %}
+    <nav-menu></nav-menu>
+    <user-profile username="{{ app.user.username }}" first_name="{{ app.user.firstName }}" last_name="{{ app.user.lastName }}" email="{{ app.user.email }}"></user-profile>
+
+        {% endblock %}
