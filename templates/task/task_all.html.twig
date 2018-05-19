@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All tasks{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <nav-menu first_name="{{ app.user.firstName }}" last_name="{{ app.user.lastName }}"></nav-menu>
+
+    {% include 'flash_messages.html.twig' %}
+
+    <div class="container-fluid">
+        <hr />
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Event</th>
+                                <th>Remove</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Single event in a single day -->
+                            {% for task in tasks %}
+
+                                {#If statement displaying ONLY UPCOIMING and today's tasks#}
+
+                                {#Displaing different background for TODAY's tasks#}
+                                {% if ( task.start | date("Y-m-d") ) == ( "now" |date("Y-m-d") ) %}
+                                    <tr style="background-color: #ffb84d;">
+                                {% elseif ( task.start | date("Y-m-d") ) < ( "now"|date("Y-m-d") ) %}
+                                    <tr style="background-color: #e6ffb3;">
+                                {% elseif ( task.start | date("Y-m-d") ) > ( "now"|date("Y-m-d") ) %}
+                                    <tr style="background-color: #80b3ff;">
+                                {% else %}
+                                    <tr>
+                                {% endif %}
+
+                                <td class="agenda-date" class="active" rowspan="1">
+                                    <div class="dayofmonth">{{ task.start | date("d") }}</div>
+                                    <div class="dayofweek">{{ task.start | date("l") }}</div>
+                                    <div class="shortdate text-muted">{{ task.start | date("M") }}, {{ task.start | date("d") }}</div>
+                                </td>
+                                <td class="agenda-time">
+                                    {{ task.start | date("H:s") }} - {{ task.end | date("H:s") }}
+                                </td>
+                                <td>
+                                    <div class="">
+                                        Some shift
+                                    </div>
+                                </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event"> 
+                                            <b>{{ task.title }}</b> <br /> 
+                                            {{ task.description }}
+                                        </div>
+                                    </td>
+                                    <td class="text-center"><a style="color: black;" href="#"><button type="button" class="btn btn-danger">Remove</button></a></td>
+                                    </tr>
+
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

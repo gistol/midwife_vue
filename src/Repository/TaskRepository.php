@@ -19,6 +19,10 @@ class TaskRepository extends ServiceEntityRepository
         parent::__construct($registry, Task::class);
     }
 
+    public function findAll(){
+        return $this->findBy( array(), array('start' => 'ASC') );
+    }
+
 //    /**
 //     * @return Task[] Returns an array of Task objects
 //     */

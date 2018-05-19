@@ -14,37 +14,29 @@ class Task
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $description;
+    public $description;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $location;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $subject;
+    public $title;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $calendar;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $start;
+    public $start;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $end;
+    public $end;
 
     public function getId()
     {
@@ -63,48 +55,24 @@ class Task
         return $this;
     }
 
-    public function getLocation(): ?string
+    public function getTitle(): ?string
     {
-        return $this->location;
+        return $this->title;
     }
 
-    public function setLocation(string $location): self
+    public function setTitle(string $title): self
     {
-        $this->location = $location;
+        $this->title = $title;
 
         return $this;
     }
 
-    public function getSubject(): ?string
-    {
-        return $this->subject;
-    }
-
-    public function setSubject(string $subject): self
-    {
-        $this->subject = $subject;
-
-        return $this;
-    }
-
-    public function getCalendar(): ?string
-    {
-        return $this->calendar;
-    }
-
-    public function setCalendar(string $calendar): self
-    {
-        $this->calendar = $calendar;
-
-        return $this;
-    }
-
-    public function getStart(): ?string
+    public function getStart(): ?\DateTimeInterface
     {
         return $this->start;
     }
 
-    public function setStart(string $start): self
+    public function setStart(\DateTimeInterface $start): self
     {
         $this->start = $start;
 

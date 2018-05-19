@@ -55,7 +55,7 @@
                         </div>
                     <div class="col-sm-1"></div>
                         <div class="col-sm-5">
-                            <a href="#"><button type="button" class="btn btn-primary">Edit Account</button></a>
+                            <a href="/edit_account"><button type="button" class="btn btn-primary">Edit Account</button></a>
                         </div>
                     </div>
 

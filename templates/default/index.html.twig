@@ -3,30 +3,7 @@
 {% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block scripts %}
-    <meta name="description" content="Javascript Scheduler Resources example" />
-    <link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
-    <script type="text/javascript" src="{{ asset('../jqwidgets/jqxcore.js') }}"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxdate.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxscheduler.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxscheduler.api.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxdatetimeinput.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxmenu.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxcalendar.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxtooltip.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxwindow.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxnumberinput.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxradiobutton.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxinput.js"></script>
-    <script type="text/javascript" src="../jqwidgets/globalization/globalize.js"></script>
-    <script type="text/javascript" src="../jqwidgets/globalization/globalize.culture.de-DE.js"></script>
+
 {% endblock %}
 
 {% block stylesheets %}
@@ -34,139 +11,151 @@
 
 {% block body %}
 
-    <nav-menu></nav-menu>
+    {% include 'flash_messages.html.twig' %}
 
-    <div class="container">
+    {{ app.user.firstName }}
+    <nav-menu firstName="{{ app.user.firstName }}" lastName="{{ app.user.lastName }}"></nav-menu>
+
+    <div class="container-fluid">
+        <hr />
         <div class="row">
-            <div class="col">
-                <div id="scheduler" class="align-center"></div>
+            <div class="col-sm-4">
+                {#Here goes the form #}
+
+            </div>
+
+            <div class="col-sm-8">
+                <p>Tasks that are done you can find here: <a href="#">CLICK HERE </a></p>
+                <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Event</th>
+                                <th>Edit</th>
+                                <th>Remove</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Single event in a single day -->
+                            {% for task in tasks %}
+
+                                {#If statement displaying ONLY UPCOIMING and today's tasks#}
+
+                                {% if ( task.start | date("Y-m-d") ) >= "now"|date("Y-m-d") %}
+
+                                    Displaing different background for TODAY's tasks
+                                    {% if ( task.start | date("Y-m-d") ) == ( "now" |date("Y-m-d") ) %}
+                                    <tr style="background-color: #e6ffb3;">
+                                    {% else %}
+                                        <tr>
+                                    {% endif %}
+
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">{{ task.start | date("d") }}</div>
+                                        <div class="dayofweek">{{ task.start | date("D") }}</div>
+                                        <div class="shortdate text-muted">{{ task.start | date("M") }}, {{ task.start | date("d") }}</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        {{ task.start | date("H:s") }} - {{ task.end | date("H:s") }}
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event"> 
+                                            {{ task.description }}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endif %}
+
+                            {% endfor %}
+
+                            {#<!-- Multiple events in a single day (note the rowspan) -->#}
+                            {#<tr>#}
+                                {#<td class="agenda-date" class="active" rowspan="3">#}
+                                    {#<div class="dayofmonth">24</div>#}
+                                    {#<div class="dayofweek">Thursday</div>#}
+                                    {#<div class="shortdate text-muted">July, 2014</div>#}
+                                {#</td>#}
+                                {#<td class="agenda-time">#}
+                                    {#8:00 - 9:00 AM#}
+                                {#</td>#}
+                                {#<td class="agenda-events">#}
+                                    {#<div class="agenda-event">#}
+                                        {#Doctor's Appointmentqqqqq#}
+                                        {#eehhehhehe#}
+                                        {#ehehhehe#}
+                                        {#hehehe#}
+                                        {#eheheh#}
+                                        {#ehehhe#}
+                                        {#ehh ehehhehehe#}
+                                        {#nenenene nenenen nennenen#}
+                                        {#en nen nnenenekwo owoe en ne e [qqp  pq enne#}
+                                        {#nenenen#}
+                                    {#</div>#}
+                                {#</td>#}
+                            {#</tr>#}
+                            {#<tr>#}
+                                {#<td class="agenda-time">#}
+                                    {#10:15 AM - 12:00 PM#}
+                                {#</td>#}
+                                {#<td class="agenda-events">#}
+                                    {#<div class="agenda-event">#}
+                                        {#Meeting with executives#}
+                                    {#</div>#}
+                                {#</td>#}
+                            {#</tr>#}
+                            {#<tr>#}
+                                {#<td class="agenda-time">#}
+                                    {#7:00 - 9:00 PM#}
+                                {#</td>#}
+                                {#<td class="agenda-events">#}
+                                    {#<div class="agenda-event">#}
+                                        {#Aria's dance recital#}
+                                    {#</div>#}
+                                {#</td>#}
+                            {#</tr>#}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <style>
+        .agenda {  }
+
+        /* Dates */
+        .agenda .agenda-date { width: auto; }
+        .agenda .agenda-date .dayofmonth {
+            min-width: 40px;
+            font-size: 36px;
+            line-height: 36px;
+            float: left;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .agenda .agenda-date .shortdate {
+            font-size: 0.75em;
+        }
 
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        var appointments = new Array();
+        /* Times */
+        .agenda .agenda-time { width: auto; }
 
-        {% for apps in data %}
-            var appointment1 = [];
-        {% endfor %}
 
-        var appointment1 = {
-            id: "id1",
-            description: "George brings projector for presentations.",
-            location: "",
-            subject: "Quarterly Project Review Meeting",
-            calendar: "Room 1",
-            start: new Date(2017, 10, 23, 9, 0, 0),
-            end: new Date(2017, 10, 23, 16, 0, 0)
-        }
-        var appointment2 = {
-            id: "id2",
-            description: "",
-            location: "",
-            subject: "IT Group Mtg.",
-            calendar: "Room 2",
-            start: new Date(2017, 10, 24, 10, 0, 0),
-            end: new Date(2017, 10, 24, 15, 0, 0)
-        }
-        var appointment3 = {
-            id: "id3",
-            description: "",
-            location: "",
-            subject: "Course Social Media",
-            calendar: "Room 3",
-            start: new Date(2017, 10, 27, 11, 0, 0),
-            end: new Date(2017, 10, 27, 13, 0, 0)
-        }
-        var appointment4 = {
-            id: "id4",
-            description: "",
-            location: "",
-            subject: "New Projects Planning",
-            calendar: "Room 2",
-            start: new Date(2017, 10, 23, 16, 0, 0),
-            end: new Date(2017, 10, 23, 18, 0, 0)
-        }
-        var appointment5 = {
-            id: "id5",
-            description: "",
-            location: "",
-            subject: "Interview with James",
-            calendar: "Room 1",
-            start: new Date(2017, 10, 25, 15, 0, 0),
-            end: new Date(2017, 10, 25, 17, 0, 0)
-        }
-        var appointment6 = {
-            id: "id6",
-            description: "",
-            location: "",
-            subject: "Interview with Nancy",
-            calendar: "Room 4",
-            start: new Date(2017, 10, 26, 14, 0, 0),
-            end: new Date(2017, 10, 26, 16, 0, 0)
-        }
-        appointments.push(appointment1);
-        appointments.push(appointment2);
-        appointments.push(appointment3);
-        appointments.push(appointment4);
-        appointments.push(appointment5);
-        appointments.push(appointment6);
-        // prepare the data
-        var source =
-            {
-                dataType: "array",
-                dataFields: [
-                    { name: 'id', type: 'string' },
-                    { name: 'description', type: 'string' },
-                    { name: 'location', type: 'string' },
-                    { name: 'subject', type: 'string' },
-                    { name: 'calendar', type: 'string' },
-                    { name: 'start', type: 'date' },
-                    { name: 'end', type: 'date' }
-                ],
-                id: 'id',
-                localData: appointments
-            };
-        var adapter = new $.jqx.dataAdapter(source);
-        $("#scheduler").jqxScheduler({
-            date: new $.jqx.date(2018, 5, 17),
-            width: 800,
-            height: 600,
-            source: adapter,
-            view: 'weekView',
-            showLegend: true,
-            ready: function () {
-                $("#scheduler").jqxScheduler('ensureAppointmentVisible', 'id1');
-            },
-            resources:
-                {
-                    colorScheme: "scheme05",
-                    dataField: "calendar",
-                    source:  new $.jqx.dataAdapter(source)
-                },
-            appointmentDataFields:
-                {
-                    from: "start",
-                    to: "end",
-                    id: "id",
-                    description: "description",
-                    location: "location",
-                    subject: "subject",
-                    resourceId: "calendar"
-                },
-            views:
-                [
-                    'dayView',
-                    'weekView',
-                    'monthView'
-                ]
-        });
-    });
-</script>
+        /* Events */
+        .agenda .agenda-events {  }
+        .agenda .agenda-events .agenda-event {  }
 
+        @media (max-width: 767px) {
+
+        }
+
+
+    </style>
 
 {% endblock %}
 

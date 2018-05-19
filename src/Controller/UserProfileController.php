@@ -18,8 +18,6 @@ class UserProfileController extends Controller
             return $this->redirectToRoute('login');
         }
 
-        dump($user);
-
         return $this->render('user_profile/index.html.twig', [
             'user' => $user
         ]);

@@ -60,18 +60,15 @@ class RegisterController extends Controller
                 $entityManager = $this->getDoctrine()->getManager();
                 $user = new User();
 
-
                 $user->setUsername($username);
                 $user->setEmail($email);
                 $user->setFirstName($first_name);
                 $user->setLastName($last_name);
 
                 $encoded = $encoder->encodePassword($user, $password);
-
                 $user->setPassword($encoded);
 
                 $entityManager->persist($user);
-
                 $entityManager->flush();
 
                 $this->addFlash('success', 'Successfully Registered!');

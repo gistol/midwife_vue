@@ -15,14 +15,24 @@ class EditAccountController extends Controller
      */
     public function index(Request $request)
     {
+        $id = $this->getUser()->getId();
+
         $form = $this->createForm(EditAccountFormType::class);
 
-        $id = $this->getUser()->getId();
+        if( !$id ){
+            return $this->redirectToRoute('login');
+        }
 
         $entity = $this->getDoctrine()->getManager();
         $repo = $entity->getRepository(User::class);
 
         $usr = $repo->find($id);
+
+        if( !$usr ){
+            throw $this->createNotFoundException(
+                'Not found user for id: ' . $id
+            );
+        }
 
         $form->handleRequest($request);
 
@@ -44,10 +54,7 @@ class EditAccountController extends Controller
                 $this->addFlash('danger', 'Passwords do not Match.');
                 return $this->redirectToRoute('edit_account');
             }
-
-
         }
-
 
         return $this->render('edit_account/index.html.twig', [
             'editAccountForm' => $form->createView()

@@ -15,17 +15,19 @@ class DefaultController extends Controller
     public function index()
     {
         $user = $this->getUser();
+        dump($user);
 
         $repo = $this->getDoctrine()->getManager()->getRepository(Task::class);
 
-        $data = $repo->find(1);
+        $query = $repo->findAll();
+        dump($query);
 
-        dump($data);
+        $tasks = $repo->findAll();
 
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
             'user' => $user,
-            'data' => $data
+            'tasks' => $tasks
         ]);
     }
 }

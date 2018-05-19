@@ -7,16 +7,17 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Schedule <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/tasks">Schedule <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Progress</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Notes</a>
+                    <a class="nav-link" href="/tasks">Tasks</a>
                 </li>
             </ul>
             <span class="navbar-text">
+                <p>Hello, {{ first_name }} {{ last_name }}</p>
             </span>
         </div>
     </nav>
@@ -24,8 +25,7 @@
 
 <script>
     export default{
-        name: "nav-menu"
+        name: "nav-menu",
+        props: ['first_name', 'last_name']
     }
 </script>
-
-<style scoped></style>

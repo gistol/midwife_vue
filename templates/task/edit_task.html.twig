@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Task Edition{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <nav-menu first_name="{{ app.user.firstName }}" last_name="{{ app.user.lastName }}"></nav-menu>
+
+    {% include 'flash_messages.html.twig' %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center">Edit Task Panel</h1>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <input type="submit" class="btn btn-success" value="Edit Task" />
+                    </div>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
