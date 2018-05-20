@@ -56,19 +56,16 @@
                                 <td class="agenda-time">
                                     {{ task.start | date("H:s") }} - {{ task.end | date("H:s") }}
                                 </td>
-                                <td>
-                                    <div class="">
-                                        Some shift
+
+                                <td class="agenda-events">
+                                    <div class="agenda-event"> 
+                                        <b>{{ task.title }}</b> <br /> 
+                                        {{ task.description }}
                                     </div>
                                 </td>
-                                    <td class="agenda-events">
-                                        <div class="agenda-event"> 
-                                            <b>{{ task.title }}</b> <br /> 
-                                            {{ task.description }}
-                                        </div>
-                                    </td>
-                                    <td class="text-center"><a style="color: black;" href="#"><button type="button" class="btn btn-danger">Remove</button></a></td>
-                                    </tr>
+
+                                <td class="text-center"><a style="color: black;" href="#"><button type="button" class="btn btn-danger">Remove</button></a></td>
+                                </tr>
 
                             {% endfor %}
 

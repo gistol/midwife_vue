@@ -54,7 +54,6 @@
                             <tr>
                                 <th>Date</th>
                                 <th>Time</th>
-                                <th>Shift</th>
                                 <th>Event</th>
                                 <th>Edit</th>
                                 <th>Remove</th>
@@ -80,26 +79,26 @@
                                         <div class="dayofweek">{{ task.start | date("l") }}</div>
                                         <div class="shortdate text-muted">{{ task.start | date("M") }}, {{ task.start | date("d") }}</div>
                                     </td>
+
                                     <td class="agenda-time">
                                         {{ task.start | date("H:s") }} - {{ task.end | date("H:s") }}
                                     </td>
-                                    <td>
-                                        <div class="">
-                                            Some shift
-                                        </div>
-                                    </td>
+
                                     <td class="agenda-events">
                                         <div class="agenda-event">
                                             <p><b>{{ task.title }}</b></p> 
                                             {{ task.description }}
                                         </div>
                                     </td>
+
                                     <td>
                                         <a href="{{ path('task_edit', {'id': task.id}) }}">
                                             <button type="button" class="btn btn-primary">Edit Task</button>
                                         </a>
                                     </td>
+
                                     <td><a href="">Remove</a></td>
+
                                     </tr>
                                 {% endif %}
 
