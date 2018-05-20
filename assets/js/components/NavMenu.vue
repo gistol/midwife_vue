@@ -10,7 +10,7 @@
                     <a class="nav-link" href="/tasks">Schedule <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Progress</a>
+                    <a class="nav-link" href="/progress">Progress</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/tasks">Tasks</a>
