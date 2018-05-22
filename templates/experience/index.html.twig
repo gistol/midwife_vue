@@ -15,8 +15,115 @@
     {#Your css file can be found in public/build/experienceForm.css  #}
     {#There you can put all of the styles#}
 
+   
+        <div class="row date">
+             <div class="col-md-12">
+                <lable>
+                    Select the date of your shift:
+                </lable>
+                <input type="date"/>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="tabsJustified" class="nav nav-tabs">
+                    <li class="nav-item"><a href="" data-target="#first" data-toggle="tab" class="nav-link small text-uppercase active">Page 1</a></li>
+                    <li class="nav-item"><a href="" data-target="#second" data-toggle="tab" class="nav-link small text-uppercase">Page 2</a></li>
+                    <li class="nav-item"><a href="" data-target="#third" data-toggle="tab" class="nav-link small text-uppercase">Page 3</a></li>
+                    <li class="nav-item"><a href="" data-target="#eu" data-toggle="tab" class="nav-link small text-uppercase">EU</a></li>
+                </ul>
+                <br>
+                    <form action="" method="">
+                        <div id="tabsJustifiedContent" class="tab-content">
+                            <div id="first" class="tab-pane fade active show">
+                                    <h3>
+                                        Svangreomsorg generelt
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen.</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
+                                        </div>
+                                        <div class="col-2">
+                                        <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                                    <h3>
+                                        Svangreomsorg for kvinder med komplikationer:
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer.</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
+                                        </div>
+                                        <div class="col-2">
+                                        <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>mindre liv</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div id="second" class="tab-pane fade">
+                                    <h3>
+                                        Svangreomsorg for kvinder med komplikationer:
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer.</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
+                                        </div>
+                                        <div class="col-2">
+                                        <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <span>mindre liv</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="checkbox" class="form-check-input">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div id="third" class="tab-pane fade">
+                                last one
+                            </div>
+                            <div id="eu" class="tab-pane fade">
+                                last of the last
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-md">Submit</button>
+                    </form>
+            </div>
+        </div>
 
-    <p class="red-color">Esisisisis</p>
 
 
 {% endblock %}
