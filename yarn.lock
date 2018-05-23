@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@progress/kendo-ui@^2018.2.516":
+  version "2018.2.516"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-ui/-/kendo-ui-2018.2.516.tgz#d6058f7f24721bd3d92da2637daf9b1836f7ab8f"
+  dependencies:
+    jquery "<=3"
+
 "@symfony/webpack-encore@^0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@symfony/webpack-encore/-/webpack-encore-0.19.0.tgz#f0725dbbede5ff9d9fdbd7a07f84accafc83ca14"
@@ -273,6 +279,10 @@ autoprefixer@^6.3.1:
     num2fraction "^1.2.2"
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
+
+awesome-bootstrap-checkbox@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/awesome-bootstrap-checkbox/-/awesome-bootstrap-checkbox-1.0.1.tgz#dab10146b6001129ab0a0ec1e54bb77c6c30457a"
 
 babel-code-frame@^6.11.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -2668,6 +2678,10 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
+jquery@<=3:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
 js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -2948,6 +2962,10 @@ md5.js@^1.3.4:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+mdbootstrap@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/mdbootstrap/-/mdbootstrap-4.5.3.tgz#38be753df8e98ebef43a0d93952e362db43783ab"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -3829,6 +3847,10 @@ preserve@^0.2.0:
 prettier@^1.7.0:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.12.1.tgz#c1ad20e803e7749faf905a409d2367e06bbe7325"
+
+pretty-checkbox@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/pretty-checkbox/-/pretty-checkbox-3.0.3.tgz#d49c8013a8fc08ee0c2d6ebde453464bfdbc428e"
 
 pretty-error@^2.1.1:
   version "2.1.1"
@@ -4856,6 +4878,12 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-event-calendar@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/vue-event-calendar/-/vue-event-calendar-1.5.2.tgz#4ed7e85073aa203558e931e04e0cd832e9db0b95"
+  dependencies:
+    vue "^2.1.8"
+
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
@@ -4878,6 +4906,16 @@ vue-loader@14.2.2:
     vue-style-loader "^4.0.1"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-schedule@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/vue-schedule/-/vue-schedule-2.0.3.tgz#4ac276f5f591509d614f295481b1a14c68283d94"
+  dependencies:
+    vue "^2.3.3"
+
+vue-simple-calendar@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vue-simple-calendar/-/vue-simple-calendar-3.0.2.tgz#b2ca80a96c97c1ab12d53bbb76865f10ecf46dfb"
+
 vue-style-loader@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.0.tgz#7588bd778e2c9f8d87bfc3c5a4a039638da7a863"
@@ -4896,7 +4934,7 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.16:
+vue@^2.1.8, vue@^2.3.3, vue@^2.5.16:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 
