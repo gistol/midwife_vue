@@ -5,9 +5,31 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-/**
+
+ /**
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ */
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="user")
+ * @ORM\AttributeOverrides({
+ *      @ORM\AttributeOverride(name="first_name",
+ *          column=@ORM\Column(
+ *              name     = "firstName",
+ *              length   = 191,
+ *              unique   = true
+ *          )
+ *      ),
+ *      @ORM\AttributeOverride(name="last_name",
+ *          column=@ORM\Column(
+ *              name     = "lastName",
+ *              length   = 191,
+ *              unique   = true
+ *          )
+ *      )
+ * })
  */
 class User implements UserInterface
 {
@@ -120,3 +142,5 @@ class User implements UserInterface
         // TODO: Implement eraseCredentials() method.
     }
 }
+
+
