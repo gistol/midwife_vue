@@ -15,90 +15,52 @@
     {#Your css file can be found in public/build/experienceForm.css  #}
     {#There you can put all of the styles#}
 
-   
-        <div class="row date">
-             <div class="col-md-12">
-                <lable>
-                    Select the date of your shift:
-                </lable>
-                <input type="date"/>  
+        <div class="container">
+            <div class="row date">
+                <div class="col-12">
+                    <lable for="datePicker">
+                        Select the date of your shift:
+                    </lable>
+                    <input type="date" id="datePicker" class="form-control"/>  
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <ul id="tabsJustified" class="nav nav-tabs">
-                    <li class="nav-item"><a href="" data-target="#first" data-toggle="tab" class="nav-link small text-uppercase active">Page 1</a></li>
-                    <li class="nav-item"><a href="" data-target="#second" data-toggle="tab" class="nav-link small text-uppercase">Page 2</a></li>
-                    <li class="nav-item"><a href="" data-target="#third" data-toggle="tab" class="nav-link small text-uppercase">Page 3</a></li>
-                    <li class="nav-item"><a href="" data-target="#eu" data-toggle="tab" class="nav-link small text-uppercase">EU</a></li>
-                </ul>
-                <br>
-                    <form action="" method="">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul id="tabsJustified" class="nav nav-tabs">
+                        <li class="nav-item"><a href="" data-target="#first" data-toggle="tab" class="nav-link small text-uppercase active">Page 1</a></li>
+                        <li class="nav-item"><a href="" data-target="#second" data-toggle="tab" class="nav-link small text-uppercase">Page 2</a></li>
+                        <li class="nav-item"><a href="" data-target="#third" data-toggle="tab" class="nav-link small text-uppercase">Page 3</a></li>
+                        <li class="nav-item"><a href="" data-target="#eu" data-toggle="tab" class="nav-link small text-uppercase">EU</a></li>
+                    </ul>
+                    <br>
+                    <form class="checkbox-forms" action="" method="">
                         <div id="tabsJustifiedContent" class="tab-content">
                             <div id="first" class="tab-pane fade active show">
-                                    <h3>
-                                        Svangreomsorg generelt
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen.</span>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="round">
-                                                <input id="checkbox" type="checkbox">
-                                                <label for="checkbox"></label>
-                                            </div>       
-                                        </div>
+                                <h3>
+                                    Svangreomsorg generelt
+                                </h3>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen.</span>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="round">
-                                                <input id="checkbox1" type="checkbox">
-                                                <label for="checkbox1"></label>
-                                            </div> 
-                                        </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox" type="checkbox">
+                                            <label for="checkbox"></label>
+                                        </div>       
                                     </div>
-                                    <h3>
-                                        Svangreomsorg for kvinder med komplikationer:
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer.</span>
-                                        </div>
-                                        <div class="col-2">
-                                             <div class="round">
-                                                <input id="checkbox2" type="checkbox">
-                                                <label for="checkbox2"></label>
-                                            </div> 
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="round">
-                                                <input id="checkbox3" type="checkbox">
-                                                <label for="checkbox3"></label>
-                                            </div> 
-                                        </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox1" type="checkbox">
+                                            <label for="checkbox1"></label>
+                                        </div> 
                                     </div>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <span>mindre liv</span>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="round">
-                                                <input id="checkbox4" type="checkbox">
-                                                <label for="checkbox4"></label>
-                                            </div> 
-                                        </div>
-                                    </div>
-                            </div>
-                            <div id="second" class="tab-pane fade">
+                                </div>
                                 <h3>
                                     Svangreomsorg for kvinder med komplikationer:
                                 </h3>
@@ -107,7 +69,10 @@
                                         <span>Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer.</span>
                                     </div>
                                     <div class="col-2">
-                                        <input type="checkbox" class="form-check-input">
+                                        <div class="round">
+                                            <input id="checkbox2" type="checkbox">
+                                            <label for="checkbox2"></label>
+                                        </div> 
                                     </div>
                                 </div>
                                 <div class="row">
@@ -115,7 +80,10 @@
                                         <span>Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles. </span>
                                     </div>
                                     <div class="col-2">
-                                        <input type="checkbox" class="form-check-input">
+                                        <div class="round">
+                                            <input id="checkbox3" type="checkbox">
+                                            <label for="checkbox3"></label>
+                                        </div> 
                                     </div>
                                 </div>
                                 <div class="row">
@@ -123,19 +91,461 @@
                                         <span>mindre liv</span>
                                     </div>
                                     <div class="col-2">
-                                        <input type="checkbox" class="form-check-input">
+                                        <div class="round">
+                                            <input id="checkbox4" type="checkbox">
+                                            <label for="checkbox4"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>diabetes mellitus</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox5" type="checkbox">
+                                            <label for="checkbox5"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>præeklampsi</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox6" type="checkbox">
+                                            <label for="checkbox6"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>grav prolong</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox7" type="checkbox">
+                                            <label for="checkbox7"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>PROM og P-PROM</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="second" class="tab-pane fade">
+                                <h3>
+                                    Anden svangreomsorg
+                                </h3>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>tværfagligt samarbejde</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox9" type="checkbox">
+                                            <label for="checkbox9"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>tværsektorielt samarbejde</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox10" type="checkbox">
+                                            <label for="checkbox10"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>hjemmebesøg i graviditeten</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox11" type="checkbox">
+                                            <label for="checkbox11"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>forældre– og fødselsforberedende undervisning</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox12" type="checkbox">
+                                            <label for="checkbox12"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>rundvisning på fødeafdelingen</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox13" type="checkbox">
+                                            <label for="checkbox13"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>efterfødselssamtale</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox14" type="checkbox">
+                                            <label for="checkbox14"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>ultralydsskanning</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox15" type="checkbox">
+                                            <label for="checkbox15"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>journalføre svangreomsorg</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox16" type="checkbox">
+                                            <label for="checkbox16"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <h3>
+                                    Fødselsomsorg generelt:
+                                </h3>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>telefonsamtale med fødende</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox17" type="checkbox">
+                                            <label for="checkbox17"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>modtagelse af kvinde/par i fødsel</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox18" type="checkbox">
+                                            <label for="checkbox18"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>observation og vurdering af den fødende og fosterets tilstand</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox19" type="checkbox">
+                                            <label for="checkbox19"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>observation af fosterhjertelyd med trærør</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox20" type="checkbox">
+                                            <label for="checkbox20"></label>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
                             <div id="third" class="tab-pane fade">
-                                last one
+                                <h3>
+                                    Fødselsomsorg for kvinder med komplikationer, fx:
+                                </h3>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>dystoci</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox21" type="checkbox">
+                                            <label for="checkbox21"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>igangsættelse af fødsler</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox22" type="checkbox">
+                                            <label for="checkbox22"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>uregelmæssig baghovedstilling</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox23" type="checkbox">
+                                            <label for="checkbox23"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>pandestilling</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox24" type="checkbox">
+                                            <label for="checkbox24"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>ansigtspræsentation</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox25" type="checkbox">
+                                            <label for="checkbox25"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>forissestilling</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox26" type="checkbox">
+                                            <label for="checkbox26"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>gemelli</span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox27" type="checkbox">
+                                            <label for="checkbox27"></label>
+                                        </div> 
+                                    </div>
+                                </div>
                             </div>
                             <div id="eu" class="tab-pane fade">
-                                last of the last
+                                <h3>
+                                    2Krav iht. EU direktiv
+                                </h3>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Samlet antal graviditetsundersøgelser, hvor du har været aktivt deltagende
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU:Konsultation for gravide kvinder omfattende mindst 100 prænatale undersøgelser
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox28" type="checkbox">
+                                            <label for="checkbox28"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Fødselsomsorg (at anvende håndgreb til modtagelse af barnet)
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU:Observation og pleje af mindst 40 fødende. Såfremt dette antal ikke kan nås på grund af mangel på fødende, kan det nedsættes til mindst 30 fødsler under forudsætning af, at eleven desuden aktivt deltager i 20 fødselsforløb, som registreres under næste felt
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox29" type="checkbox">
+                                            <label for="checkbox29"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <span>Fødselsforløb (uden at anvende håndgreb til modtagelse af barnet) </span>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox30" type="checkbox">
+                                            <label for="checkbox30"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Jordemoderfaglig omsorg ved underkropsstilling
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU:Aktiv deltagelse i fødsler i underkroppræsentation. Er dette ikke muligt på grund af et manglende antal fødsler i underkroppræsentation, bør undervisningen ske ved simulering
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox31" type="checkbox">
+                                            <label for="checkbox31"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Jordemoderfaglig omsorg ved og anlæggelse af episiotomi samt suturering af denne
+                                            </span>
+                                             <div class="tool-tip">
+                                                EU:Anlæggelse af episiotomi og indførelse i efterfølgende sutur. Hvis det er absolut nødvendigt, kan der anvendes simulering
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox32" type="checkbox">
+                                            <label for="checkbox32"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Jordemoderfaglig omsorg ved risikoforløb
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU:Observation og pleje af 40 risikopatienter før, under og efter fødslen
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox33" type="checkbox">
+                                            <label for="checkbox33"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Barselsomsorg for mor og barn
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU:Observation og pleje, herunder undersøgelse, af mindst 100 barselskvinder og normale nyfødte
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox34" type="checkbox">
+                                            <label for="checkbox34"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Jordemoderfaglig omsorg for nyfødte med brug for særlig omsorg
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU: Observation og pleje af nyfødte, der kræver særlig pleje, herunder for tidligt og for sent fødte børn samt nyfødte med unormalt lav fødselsvægt og syge nyfødte
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox35" type="checkbox">
+                                            <label for="checkbox35"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Jordemoderfaglig omsorg vedpatologiske tilfælde inden for gynækologi og obstetrik
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU: Pleje af patologiske tilfælde inden for gynækologi og obstetrik
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox36" type="checkbox">
+                                            <label for="checkbox36"></label>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="tool-tip-holder">
+                                            <span>
+                                                Medicinsk og kirurgisk pleje
+                                            </span>
+                                            <div class="tool-tip">
+                                                EU:Indførelse i pleje inden for medicin og kirurgi. Indførelsen skal omfatte en teoretisk undervisning og kliniske øvelser.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="round">
+                                            <input id="checkbox37" type="checkbox">
+                                            <label for="checkbox37"></label>
+                                        </div> 
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-success btn-md">Submit</button>
                     </form>
+                </div>
             </div>
         </div>
 
