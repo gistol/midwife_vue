@@ -38,6 +38,7 @@ class EditAccountController extends Controller
 
         if( $form->isSubmitted() && $form->isValid() ){
             $data = $form->getData();
+            $data->getMyCheckBox ;
             $email = $data['email'];
             $password = $data['password'];
             $cPassword = $data['confirmPassword'];
