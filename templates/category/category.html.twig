@@ -3,8 +3,11 @@
 {% block title %}First Category Form{% endblock %}
 
 {% block header %}
-
 {% endblock header %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/experienceForm.css') }}" />
+{% endblock %}
 
 {% block body %}
 
@@ -26,16 +29,58 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-10">
-                {{ form_start(categoryForm) }}
-                {{ form_widget(categoryForm) }}
 
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <input type="submit" value="Save" class="btn btn-success">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul id="tabsJustified" class="nav nav-tabs">
+                <li class="nav-item"><a href="" data-target="#first" data-toggle="tab" class="nav-link small text-uppercase active">Category 1</a></li>
+                <li class="nav-item"><a href="" data-target="#second" data-toggle="tab" class="nav-link small text-uppercase">Category 2</a></li>
+                <li class="nav-item"><a href="" data-target="#third" data-toggle="tab" class="nav-link small text-uppercase">Category 3</a></li>
+                <li class="nav-item"><a href="" data-target="#eu" data-toggle="tab" class="nav-link small text-uppercase">EU</a></li>
+            </ul>
+            <br>
+
+            <div id="tabsJustifiedContent" class="tab-content">
+
+                    <div id="tabsJustifiedContent" class="tab-content">
+
+                        <div id="first" class="tab-pane fade active show">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-8">
+                                    {{ form_start(categoryForm) }}
+                                    {{ form_widget(categoryForm) }}
+                                    {{ form_end(categoryForm) }}
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+
+
+                        <div id="second" class="tab-pane fade">
+
+                            Second Category Content
+
+                        </div>
+
+                        <div id="third" class="tab-pane fade">
+
+                            Third Category Content
+                        </div>
+
+                        <div id="eu" class="tab-pane fade">
+
+                            Fourth Category Content
+
+                        </div>
                     </div>
                 </div>
-
-                {{ form_end(categoryForm) }}
             </div>
         </div>
     </div>

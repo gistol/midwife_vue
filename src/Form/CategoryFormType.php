@@ -5,6 +5,7 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -37,7 +38,7 @@ class CategoryFormType extends AbstractType
             ->add('field1', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
-                'placeholder' => 'Example Text To save space in label',
+                'placeholder' => 'Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -47,6 +48,7 @@ class CategoryFormType extends AbstractType
             ->add('field2', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -56,6 +58,7 @@ class CategoryFormType extends AbstractType
             ->add('field3', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -65,6 +68,7 @@ class CategoryFormType extends AbstractType
             ->add('field4', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -74,6 +78,7 @@ class CategoryFormType extends AbstractType
             ->add('field5', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -83,6 +88,7 @@ class CategoryFormType extends AbstractType
             ->add('field6', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -92,6 +98,7 @@ class CategoryFormType extends AbstractType
             ->add('field7', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -101,6 +108,7 @@ class CategoryFormType extends AbstractType
             ->add('field8', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -110,6 +118,7 @@ class CategoryFormType extends AbstractType
             ->add('field9', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
@@ -119,11 +128,18 @@ class CategoryFormType extends AbstractType
             ->add('field10', ChoiceType::class, array(
                 'error_bubbling' => true,
                 'required' => true,
+                'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
+            ->add('submit', SubmitType::class, array(
+                'label' => 'Create',
+                'attr' => [
+                    'class' => 'btn btn-success'
+                ]
+            ))
 
 //            ->add('field10', CheckboxType::class, array(
 //                'required' => false,
