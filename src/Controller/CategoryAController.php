@@ -34,52 +34,71 @@ class CategoryAController extends Controller
 
             dump($data);
 
+            if( $data->getSemester() == 2){
+                $categorya->setSemester(2);
+            } elseif( $data->getSemester() == 4){
+                $categorya->setSemester(4);
+            } else {
+                $categorya->setSemester(6);
+            }
+
+            $date = $data->getDate();
+            $categorya->setDate($date);
 
             if ($data->getField1() == true) {
                 $categorya->setField1(1);
             } else {
                 $categorya->setField1(0);
             }
+
             if ($data->getField2() === true) {
                 $categorya->setField2(1);
             } else {
                 $categorya->setField2(0);
             }
+
             if ($data->getField3() === true) {
                 $categorya->setField3(1);
             } else {
                 $categorya->setField3(0);
             }
+
             if ($data->getField4() === true) {
                 $categorya->setField4(1);
             } else {
                 $categorya->setField4(0);
             }
+
             if ($data->getField5() === true) {
                 $categorya->setField5(1);
             } else {
                 $categorya->setField5(0);
             }
+
             if ($data->getField6() === true) {
                 $categorya->setField6(1);
             } else {
                 $categorya->setField6(0);
             }
+
             if ($data->getField7() === true) {
                 $categorya->setField7(1);
             } else {
                 $categorya->setField7(0);
             }
+
             if ($data->getField8() === true) {
                 $categorya->setField8(1);
             } else {
                 $categorya->setField8(0);
             }
+
             if ($data->getField9() === true) {
                 $categorya->setField9(1);
             } else {
                 $categorya->setField9(0);
             }
+
             if ($data->getField10() === true) {
                 $categorya->setField10(1);
             } else {

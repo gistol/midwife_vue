@@ -76,6 +76,16 @@ class CategoryA
      */
     private $field10;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $semester;
+
     public function getId()
     {
         return $this->id;
@@ -197,6 +207,30 @@ class CategoryA
     public function setField10($field10): self
     {
         $this->field10 = (string)$field10;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getSemester(): ?int
+    {
+        return $this->semester;
+    }
+
+    public function setSemester(int $semester): self
+    {
+        $this->semester = $semester;
 
         return $this;
     }

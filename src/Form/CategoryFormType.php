@@ -2,9 +2,8 @@
 
 namespace App\Form;
 
-use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -15,7 +14,29 @@ class CategoryFormType extends AbstractType
     {
 
         $builder
-            ->add('field1', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('semester', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
+                'placeholder' => 'Choose your semester',
+                'choices'  => array(
+                    '2' => '2',
+                    '4' => '4',
+                    '6' => '6'
+                ),
+            ))
+            ->add('date', DateType::class, array(
+                'widget' => 'choice',
+                'label' => false,
+                'required' => true,
+                'placeholder' => [
+                    'year' => 'Year',
+                    'month' => 'Month',
+                    'day' => 'Day'
+                ]
+            ))
+            ->add('field1', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'placeholder' => 'Example Text To save space in label',
                 'choices'  => array(
                     'Yes' => true,
@@ -23,63 +44,81 @@ class CategoryFormType extends AbstractType
                 ),
                 ))
 
-            ->add('field2', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field2', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 ),
                 ))
 
-            ->add('field3', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field3', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field4', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field4', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field5', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field5', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field6', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field6', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field7', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field7', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field8', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field8', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field9', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field9', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false
                 )
                 ))
 
-            ->add('field10', ChoiceType::class, array('error_bubbling' => true,'required' => true,
+            ->add('field10', ChoiceType::class, array(
+                'error_bubbling' => true,
+                'required' => true,
                 'choices'  => array(
                     'Yes' => true,
                     'No' => false

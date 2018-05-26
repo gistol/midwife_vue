@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4243147-666b-4b86-a51d-892a2808d4c7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/CategoryAController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/CategoryA.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/CategoryFormType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20180523194600.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/CategoryARepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/category/category.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
-      <change beforePath="$PROJECT_DIR$/templates/experience/index.html.twig" afterPath="$PROJECT_DIR$/templates/experience/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryAController.php" afterPath="$PROJECT_DIR$/src/Controller/CategoryAController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CategoryA.php" afterPath="$PROJECT_DIR$/src/Entity/CategoryA.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryFormType.php" afterPath="$PROJECT_DIR$/src/Form/CategoryFormType.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +21,8 @@
       <file leaf-file-name="CategoryAController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/CategoryAController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+            <state relative-caret-position="434">
+              <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -37,9 +31,11 @@
       <file leaf-file-name="CategoryFormType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/CategoryFormType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-              <folding />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#28#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,9 +112,9 @@
         <option value="$PROJECT_DIR$/src/Controller/EditAccountController.php" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/templates/experience/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/CategoryFormType.php" />
         <option value="$PROJECT_DIR$/src/Entity/CategoryA.php" />
         <option value="$PROJECT_DIR$/templates/category/category.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/CategoryFormType.php" />
         <option value="$PROJECT_DIR$/src/Controller/CategoryAController.php" />
       </list>
     </option>
@@ -391,12 +387,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526473421082</updated>
       <workItem from="1526473422757" duration="47929000" />
-      <workItem from="1526649784059" duration="34184000" />
+      <workItem from="1526649784059" duration="35942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82113000" />
+    <option name="totallyTimeSpent" value="83871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -806,16 +802,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/CategoryFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#28#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CategoryAController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        <state relative-caret-position="434">
+          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding />
         </state>
       </provider>
