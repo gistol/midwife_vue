@@ -54,6 +54,8 @@
                             <div class="row">
                                 <div class="col-2"></div>
                                 <div class="col-8">
+                                    {#Submit button is included in FormType so you do not have to create any on your own#}
+                                    {#The point is to make it clear for symfony to submit right one#}
                                     {{ form_start(categoryForm) }}
                                     {{ form_widget(categoryForm) }}
                                     {{ form_end(categoryForm) }}
@@ -77,6 +79,11 @@
                         <div id="eu" class="tab-pane fade">
 
                             Fourth Category Content
+
+                            {{ form_start(testForm) }}
+                            {{ form_widget(testForm) }}
+                            <input type="submit" class="btn btn-success" value="Submit2" />
+                            {{ form_end(testForm) }}
 
                         </div>
                     </div>

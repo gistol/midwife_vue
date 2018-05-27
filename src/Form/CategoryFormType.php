@@ -14,6 +14,10 @@ class CategoryFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
+
+//        in 'choices' there are no more "true" and "false" as false was creating "" ( null value ) which is not accepted by DB
+        // so we have to keep that this way as it is in here
+        // Here is also submit button created to not mess with a few forms on one webpage
         $builder
             ->add('semester', ChoiceType::class, array(
                 'error_bubbling' => true,
@@ -40,8 +44,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen.',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 ),
                 ))
 
@@ -50,8 +54,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 ),
                 ))
 
@@ -60,8 +64,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
@@ -70,8 +74,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
@@ -80,8 +84,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser, hvor den studerende skal have haft hænderne på maven og varetaget dele af samtalen i undersøgelser med en af nedenstående komplikationer',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
@@ -90,8 +94,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
@@ -100,8 +104,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
@@ -110,8 +114,8 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
@@ -120,18 +124,18 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
-                    'Yes' => true,
-                    'No' => false
+                    'Yes' => 1,
+                    'No' => 0
                 )
                 ))
 
             ->add('field10', ChoiceType::class, array(
                 'error_bubbling' => true,
-                'required' => true,
+                'required' => 1,
                 'placeholder' => 'Graviditetsundersøgelser på fødegangen, i jordemoderkonsultation, i klinikker, ambulatorium, svangreafdelinger, i hjemmet mm optælles.',
                 'choices'  => array(
                     'Yes' => true,
-                    'No' => false
+                    'No' => 0
                 )
                 ))
             ->add('submit', SubmitType::class, array(
