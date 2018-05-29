@@ -34,9 +34,9 @@ class CategoryFormType extends AbstractType
                 'label' => false,
                 'required' => true,
                 'placeholder' => [
-                    'year' => 'Year',
-                    'month' => 'Month',
-                    'day' => 'Day'
+                    'year' => date("Y", time()),
+                    'month' => date("M", time()),
+                    'day' => date("d", time())
                 ]
             ))
             ->add('field1', ChoiceType::class, array(

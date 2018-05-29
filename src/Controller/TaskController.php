@@ -155,4 +155,21 @@ class TaskController extends Controller
         ]);
     }
 
+    /**
+     * @Route("/remove_task/{id}", name="remove_task")
+     */
+    public function remove_task(Task $task){
+
+        if( !$task ){
+            throw $this->createNotFoundException('No Task found ');
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($task);
+        $em->flush();
+        $this->addFlash('danger', 'Your task has been removed.');
+
+        return $this->redirectToRoute('tasks');
+    }
+
 }

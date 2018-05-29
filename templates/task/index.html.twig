@@ -91,13 +91,16 @@
                                         </div>
                                     </td>
 
-                                    <td>
+                                    <td class="text-center">
                                         <a href="{{ path('task_edit', {'id': task.id}) }}">
                                             <button type="button" class="btn btn-primary">Edit Task</button>
                                         </a>
                                     </td>
 
-                                    <td><a href="">Remove</a></td>
+                                    <td class="text-center"><a href="{{ path('remove_task', {'id': task.id}) }}">
+                                            <button type="button" class="btn btn-danger">Remove</button>
+                                        </a>
+                                    </td>
 
                                     </tr>
                                 {% endif %}

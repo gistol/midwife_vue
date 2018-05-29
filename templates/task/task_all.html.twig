@@ -64,7 +64,11 @@
                                     </div>
                                 </td>
 
-                                <td class="text-center"><a style="color: black;" href="#"><button type="button" class="btn btn-danger">Remove</button></a></td>
+                                <td class="text-center"><a href="{{ path('remove_task', {'id': task.id}) }}">
+                                        <button type="button" class="btn btn-danger">Remove</button>
+                                    </a>
+                                </td>
+
                                 </tr>
 
                             {% endfor %}

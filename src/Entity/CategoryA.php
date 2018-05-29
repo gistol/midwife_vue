@@ -14,82 +14,82 @@ class CategoryA
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field1;
+    public $field1;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field2;
+    public $field2;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field3;
+    public $field3;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field4;
+    public $field4;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field5;
+    public $field5;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field6;
+    public $field6;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field7;
+    public $field7;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field8;
+    public $field8;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field9;
+    public $field9;
 
     /**
      * @var boolean
      * @ORM\Column(type="boolean")
      */
-    private $field10;
+    public $field10;
 
     /**
      * @ORM\Column(type="date")
      */
-    private $date;
+    public $date;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $semester;
+    public $semester;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $user_id;
+    public $user_id;
 
     public function getId()
     {
